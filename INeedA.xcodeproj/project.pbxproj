@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		68094EA88458189EB687CBE3 /* Pods_INeedA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F682F6E148F2A5B869F53551 /* Pods_INeedA.framework */; };
 		F31ABCF91BDC24870014052F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31ABCF81BDC24870014052F /* AppDelegate.swift */; };
 		F31ABCFB1BDC24870014052F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31ABCFA1BDC24870014052F /* ViewController.swift */; };
 		F31ABCFE1BDC24870014052F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F31ABCFC1BDC24870014052F /* Main.storyboard */; };
 		F31ABD011BDC24870014052F /* INeedA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F31ABCFF1BDC24870014052F /* INeedA.xcdatamodeld */; };
 		F31ABD031BDC24870014052F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F31ABD021BDC24870014052F /* Assets.xcassets */; };
 		F31ABD061BDC24870014052F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F31ABD041BDC24870014052F /* LaunchScreen.storyboard */; };
+		F390D8A51BDC260B00C4308F /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F390D8A41BDC260B00C4308F /* MainNavigationController.swift */; settings = {ASSET_TAGS = (); }; };
+		F39F5E831BDC288E00D97FE8 /* OfferDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39F5E821BDC288E00D97FE8 /* OfferDetailsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1E8C5F472ED2134FA4D62755 /* Pods-INeedA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INeedA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-INeedA/Pods-INeedA.debug.xcconfig"; sourceTree = "<group>"; };
+		C8764C19272FADFBCD4823C5 /* Pods-INeedA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-INeedA.release.xcconfig"; path = "Pods/Target Support Files/Pods-INeedA/Pods-INeedA.release.xcconfig"; sourceTree = "<group>"; };
 		F31ABCF51BDC24870014052F /* INeedA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = INeedA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F31ABCF81BDC24870014052F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F31ABCFA1BDC24870014052F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +29,9 @@
 		F31ABD021BDC24870014052F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F31ABD051BDC24870014052F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F31ABD071BDC24870014052F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F390D8A41BDC260B00C4308F /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		F39F5E821BDC288E00D97FE8 /* OfferDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferDetailsViewController.swift; sourceTree = "<group>"; };
+		F682F6E148F2A5B869F53551 /* Pods_INeedA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_INeedA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68094EA88458189EB687CBE3 /* Pods_INeedA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		607B17FBDBE6178D3A9F1B81 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F682F6E148F2A5B869F53551 /* Pods_INeedA.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A0B5F296B7550673E1713288 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1E8C5F472ED2134FA4D62755 /* Pods-INeedA.debug.xcconfig */,
+				C8764C19272FADFBCD4823C5 /* Pods-INeedA.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F31ABCEC1BDC24870014052F = {
 			isa = PBXGroup;
 			children = (
 				F31ABCF71BDC24870014052F /* INeedA */,
 				F31ABCF61BDC24870014052F /* Products */,
+				A0B5F296B7550673E1713288 /* Pods */,
+				607B17FBDBE6178D3A9F1B81 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +84,7 @@
 		F31ABCF71BDC24870014052F /* INeedA */ = {
 			isa = PBXGroup;
 			children = (
+				F39F5E811BDC285D00D97FE8 /* Pages */,
 				F31ABCF81BDC24870014052F /* AppDelegate.swift */,
 				F31ABCFA1BDC24870014052F /* ViewController.swift */,
 				F31ABCFC1BDC24870014052F /* Main.storyboard */,
@@ -63,8 +92,17 @@
 				F31ABD041BDC24870014052F /* LaunchScreen.storyboard */,
 				F31ABD071BDC24870014052F /* Info.plist */,
 				F31ABCFF1BDC24870014052F /* INeedA.xcdatamodeld */,
+				F390D8A41BDC260B00C4308F /* MainNavigationController.swift */,
 			);
 			path = INeedA;
+			sourceTree = "<group>";
+		};
+		F39F5E811BDC285D00D97FE8 /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				F39F5E821BDC288E00D97FE8 /* OfferDetailsViewController.swift */,
+			);
+			name = Pages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +112,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F31ABD0A1BDC24870014052F /* Build configuration list for PBXNativeTarget "INeedA" */;
 			buildPhases = (
+				A42AB4ADEDE04F434FEE7F82 /* Check Pods Manifest.lock */,
 				F31ABCF11BDC24870014052F /* Sources */,
 				F31ABCF21BDC24870014052F /* Frameworks */,
 				F31ABCF31BDC24870014052F /* Resources */,
+				A93DBBC796CFA338C923E93F /* Embed Pods Frameworks */,
+				0EC5C1E4DF36D6D74E425424 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -132,6 +173,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0EC5C1E4DF36D6D74E425424 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-INeedA/Pods-INeedA-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A42AB4ADEDE04F434FEE7F82 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A93DBBC796CFA338C923E93F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-INeedA/Pods-INeedA-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F31ABCF11BDC24870014052F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -139,6 +228,8 @@
 			files = (
 				F31ABCFB1BDC24870014052F /* ViewController.swift in Sources */,
 				F31ABCF91BDC24870014052F /* AppDelegate.swift in Sources */,
+				F39F5E831BDC288E00D97FE8 /* OfferDetailsViewController.swift in Sources */,
+				F390D8A51BDC260B00C4308F /* MainNavigationController.swift in Sources */,
 				F31ABD011BDC24870014052F /* INeedA.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,6 +341,7 @@
 		};
 		F31ABD0B1BDC24870014052F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E8C5F472ED2134FA4D62755 /* Pods-INeedA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = INeedA/Info.plist;
@@ -261,6 +353,7 @@
 		};
 		F31ABD0C1BDC24870014052F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8764C19272FADFBCD4823C5 /* Pods-INeedA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = INeedA/Info.plist;
@@ -289,6 +382,7 @@
 				F31ABD0C1BDC24870014052F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
