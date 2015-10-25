@@ -41,6 +41,7 @@ class LandingPage: UIViewController {
                             model.address = (dict["address"] as! String) + "\n" + (dict["city"] as! String)
                             model.job = dict["job_tag"] as! String
                             model.pay = "$" + (dict["pay_rate"] as! String) + "/hr"
+                            model.payNumber = (dict["pay_rate"] as! String)
                             model.phoneNumber = dict["phone"] as! String
                             self.performSegueWithIdentifier("GoToOfferDetailsPage", sender: model)
                             

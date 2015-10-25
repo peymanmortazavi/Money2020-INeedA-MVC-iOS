@@ -14,6 +14,7 @@ class OfferDetailsModel {
     var job: String = ""
     var address: String = ""
     var pay: String = ""
+    var payNumber: String = ""
     var fullName: String = ""
     var phoneNumber: String = ""
 }
@@ -21,8 +22,32 @@ class OfferDetailsModel {
 class OfferDetailsViewController: UIViewController {
     
     @IBAction func finishJobClicked(sender: AnyObject) {
-        socket?.emit("finished_job", args: ["{\"total_cost\":\"12.24\", \"job\":\"Cleaner\"}"])
-        print("sent finish line")
+        
+        var alert = UIAlertController(title: "Work Report", message: "How many hours did you work?", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Default, handler: nil))
+        alert.addTextFieldWithConfigurationHandler { (textField) -> Void in
+            textField.placeholder = "hours."
+        }
+        self.presentViewController(alert, animated: true, completion: nil)
+        
+        alert.addAction(UIAlertAction(title: "Finish Job", style: .Default, handler: { action in
+            switch action.style {
+            case .Default:
+                var content = "{\"total_cost\":\"";
+                content += String(((alert.textFields?[0].text as! NSString).floatValue)*((self.model.payNumber as! NSString).floatValue))
+                content += "\", \"job\":\""
+                content += self.model.job + "\"}"
+                socket?.emit("finished_job", args: [content])
+                self.performSegueWithIdentifier("ToReviewPage", sender: nil)
+                
+            case .Cancel:
+                print("cancel")
+                
+            case .Destructive:
+                print("destructive")
+            }
+        }))
+        
     }
     
     @IBOutlet weak var addressLabel: UITextView!
