@@ -9,20 +9,20 @@
 import UIKit
 import SIOSocket
 
+var socket: SIOSocket?
+
 class LandingPage: UIViewController {
-    
-    var socket: SIOSocket?
 
     override func viewDidLoad() {
         
-        SIOSocket.socketWithHost("https://ineedaapp.herokuapp.com") { (socket) -> Void in
+        SIOSocket.socketWithHost("https://ineedaapp.herokuapp.com") { (sk) -> Void in
             
             self.title = "Profile"
             
-            self.socket = socket;
-            socket.on("request_pool", callback: { (data) -> Void in
+            socket = sk;
+            socket?.on("request_pool", callback: { (data) -> Void in
+                
                 var dict = data[0]
-                print(dict)
                 
                 dispatch_async(dispatch_get_main_queue()) {
                     
@@ -33,9 +33,15 @@ class LandingPage: UIViewController {
                     self.presentViewController(alert, animated: true, completion: nil)
                     
                     alert.addAction(UIAlertAction(title: "Yes", style: .Default, handler: { action in
-                        switch action.style{
+                        switch action.style {
                         case .Default:
-                            self.performSegueWithIdentifier("GoToOfferDetailsPage", sender: nil)
+                            var model = OfferDetailsModel()
+                            model.fullName = dict["name"] as! String
+                            model.address = (dict["address"] as! String) + "\n" + (dict["city"] as! String)
+                            model.job = dict["job_tag"] as! String
+                            model.pay = "$" + (dict["pay_rate"] as! String) + "/hr"
+                            model.phoneNumber = dict["phone"] as! String
+                            self.performSegueWithIdentifier("GoToOfferDetailsPage", sender: model)
                             
                         case .Cancel:
                             print("cancel")
@@ -50,6 +56,11 @@ class LandingPage: UIViewController {
             })
         }
         
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var vc = segue.destinationViewController as! OfferDetailsViewController
+        vc.model = sender as! OfferDetailsModel
     }
     
 }

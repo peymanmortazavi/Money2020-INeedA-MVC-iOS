@@ -11,15 +11,20 @@ import SnapKit
 import MapKit
 
 class OfferDetailsModel {
-    var Job: String = ""
-    var Address: String = ""
-    var Cost: String = ""
-    var Description: String = ""
-    var FullName: String = ""
-    var PhoneNumber: String = ""
+    var job: String = ""
+    var address: String = ""
+    var pay: String = ""
+    var fullName: String = ""
+    var phoneNumber: String = ""
 }
 
 class OfferDetailsViewController: UIViewController {
+    
+    @IBAction func finishJobClicked(sender: AnyObject) {
+        
+        socket?.emit("finished_job")
+        print("sent finish line")
+    }
     
     @IBOutlet weak var addressLabel: UITextView!
     @IBOutlet weak var phoneLabel: UITextView!
@@ -30,7 +35,7 @@ class OfferDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         
-        self.title = "Cleaner"
+        self.title = model.job
         
         let map = MKMapView()
         mapContainer.addSubview(map)
@@ -38,6 +43,22 @@ class OfferDetailsViewController: UIViewController {
             make.left.right.top.bottom.equalTo(mapContainer);
         }
         
+        addressLabel.text = self.model.address
+        phoneLabel.text = self.model.phoneNumber
+        payLabel.text = self.model.pay
+        nameLabel.text = self.model.fullName
+        
+        var geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(self.model.address, completionHandler: {(placemarks, error) -> Void in
+            if let placemark = placemarks?.first {
+                let coordinates:CLLocationCoordinate2D = placemark.location!.coordinate
+                
+
+                let annot = MKPointAnnotation()
+                annot.coordinate = coordinates
+                map.addAnnotation(annot)
+            }
+        })
         
     }
     

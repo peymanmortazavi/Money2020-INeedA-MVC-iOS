@@ -16,7 +16,7 @@ class MainNavigationController : UINavigationController {
 
         let font = UIFont(name: "Avenir-Light", size: 22)
         if let font = font {
-            UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName : font, NSForegroundColorAttributeName : UIColor.grayColor()]
+            UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName : font, NSForegroundColorAttributeName : UIColor.whiteColor()]
             
             UINavigationBar.appearance().tintColor = UIColor.lightGrayColor()
             UINavigationBar.appearance().setBackgroundImage(UIImage(named: "NavBackground"), forBarMetrics: UIBarMetrics.Default);
