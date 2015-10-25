@@ -21,6 +21,10 @@ class OfferDetailsModel {
 
 class OfferDetailsViewController: UIViewController {
     
+    @IBOutlet weak var addressLabel: UITextView!
+    @IBOutlet weak var phoneLabel: UITextView!
+    @IBOutlet weak var payLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var mapContainer: UIView!
     var model: OfferDetailsModel = OfferDetailsModel()
     

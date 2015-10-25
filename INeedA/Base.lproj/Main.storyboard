@@ -14,7 +14,7 @@
                         <animations/>
                     </navigationBar>
                     <connections>
-                        <segue destination="TjF-OS-5nY" kind="relationship" relationship="rootViewController" id="SzC-qd-Zcp"/>
+                        <segue destination="8nu-bl-YwJ" kind="relationship" relationship="rootViewController" id="r8f-CL-9I3"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uv5-lM-npk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -88,16 +88,98 @@
                     <navigationItem key="navigationItem" id="YgI-5g-DIG"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="addressLabel" destination="YSV-BQ-ZJo" id="rNu-bC-wyu"/>
                         <outlet property="mapContainer" destination="7le-MW-K7a" id="rHi-iK-kjx"/>
+                        <outlet property="nameLabel" destination="ch8-BF-qJX" id="ulG-bI-Ge5"/>
+                        <outlet property="payLabel" destination="mx8-UX-vq9" id="l1r-PS-KjW"/>
+                        <outlet property="phoneLabel" destination="1SR-fC-sUR" id="Zto-4k-tad"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rRh-CO-19i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="827.5" y="421.5"/>
+            <point key="canvasLocation" x="959.5" y="455.5"/>
+        </scene>
+        <!--Landing Page-->
+        <scene sceneID="e2I-8J-k5G">
+            <objects>
+                <viewController id="8nu-bl-YwJ" customClass="LandingPage" customModule="INeedA" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1Va-hG-qlG"/>
+                        <viewControllerLayoutGuide type="bottom" id="hiq-6v-RJC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ker-e7-Z5o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Peyman Mortazavi" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mbi-6A-Ha6">
+                                <rect key="frame" x="81" y="273" width="213" height="34"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                                <color key="textColor" red="0.25098039215686274" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Looking for " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0W-XH-047">
+                                <rect key="frame" x="66" y="315" width="99" height="34"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="jobs." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jFx-tC-YJv">
+                                <rect key="frame" x="276" y="315" width="99" height="34"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                <color key="textColor" red="0.25098039220000001" green="0.25098039220000001" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cleaning, Pitching" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbG-wF-RWE">
+                                <rect key="frame" x="148" y="315" width="142" height="34"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="THe-ai-sgZ">
+                                <rect key="frame" x="177" y="406" width="20" height="20"/>
+                                <animations/>
+                            </activityIndicatorView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="AnonymousUserIcon" translatesAutoresizingMaskIntoConstraints="NO" id="3kU-3x-v7N">
+                                <rect key="frame" x="68" y="116" width="240" height="97"/>
+                                <animations/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderIBColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Stars" translatesAutoresizingMaskIntoConstraints="NO" id="wD9-UA-hId" customClass="ra">
+                                <rect key="frame" x="129" y="232" width="117" height="29"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Mhj-C2-hWe"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="TjF-OS-5nY" kind="show" identifier="GoToOfferDetailsPage" id="Oam-1Z-qZe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iow-b2-Vpm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="447.5" y="1200.5"/>
         </scene>
     </scenes>
     <resources>
+        <image name="AnonymousUserIcon" width="128" height="126"/>
         <image name="Call" width="128" height="128"/>
+        <image name="Stars" width="187" height="38"/>
         <image name="Verified" width="32" height="32"/>
     </resources>
 </document>

@@ -14,13 +14,18 @@ class MainNavigationController : UINavigationController {
     override func viewDidLoad() {
         
 
-        let font = UIFont(name: "Avenir-Light", size: 20)
+        let font = UIFont(name: "Avenir-Light", size: 22)
         if let font = font {
             UINavigationBar.appearance().titleTextAttributes = [NSFontAttributeName : font, NSForegroundColorAttributeName : UIColor.grayColor()]
+            
+            UINavigationBar.appearance().tintColor = UIColor.lightGrayColor()
+            UINavigationBar.appearance().setBackgroundImage(UIImage(named: "NavBackground"), forBarMetrics: UIBarMetrics.Default);
         }
-
-//        self.setViewControllers([OfferDetailsViewController()], animated: true)
         
+    }
+    
+    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+        return UIStatusBarStyle.LightContent
     }
     
 }

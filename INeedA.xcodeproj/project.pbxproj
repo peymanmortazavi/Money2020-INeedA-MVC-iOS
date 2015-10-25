@@ -16,6 +16,7 @@
 		F31ABD061BDC24870014052F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F31ABD041BDC24870014052F /* LaunchScreen.storyboard */; };
 		F390D8A51BDC260B00C4308F /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F390D8A41BDC260B00C4308F /* MainNavigationController.swift */; settings = {ASSET_TAGS = (); }; };
 		F39F5E831BDC288E00D97FE8 /* OfferDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39F5E821BDC288E00D97FE8 /* OfferDetailsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		F39F5E871BDC875200D97FE8 /* LandingPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39F5E861BDC875200D97FE8 /* LandingPage.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		F31ABD071BDC24870014052F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F390D8A41BDC260B00C4308F /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		F39F5E821BDC288E00D97FE8 /* OfferDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferDetailsViewController.swift; sourceTree = "<group>"; };
+		F39F5E861BDC875200D97FE8 /* LandingPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingPage.swift; sourceTree = "<group>"; };
 		F682F6E148F2A5B869F53551 /* Pods_INeedA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_INeedA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				F39F5E821BDC288E00D97FE8 /* OfferDetailsViewController.swift */,
+				F39F5E861BDC875200D97FE8 /* LandingPage.swift */,
 			);
 			name = Pages;
 			sourceTree = "<group>";
@@ -228,6 +231,7 @@
 			files = (
 				F31ABCFB1BDC24870014052F /* ViewController.swift in Sources */,
 				F31ABCF91BDC24870014052F /* AppDelegate.swift in Sources */,
+				F39F5E871BDC875200D97FE8 /* LandingPage.swift in Sources */,
 				F39F5E831BDC288E00D97FE8 /* OfferDetailsViewController.swift in Sources */,
 				F390D8A51BDC260B00C4308F /* MainNavigationController.swift in Sources */,
 				F31ABD011BDC24870014052F /* INeedA.xcdatamodeld in Sources */,
