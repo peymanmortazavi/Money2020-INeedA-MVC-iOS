@@ -22,6 +22,7 @@ class LandingPage: UIViewController {
             socket = sk;
             socket?.on("request_pool", callback: { (data) -> Void in
                 
+                print("Got the request")
                 var dict = data[0]
                 
                 dispatch_async(dispatch_get_main_queue()) {

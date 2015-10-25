@@ -21,8 +21,7 @@ class OfferDetailsModel {
 class OfferDetailsViewController: UIViewController {
     
     @IBAction func finishJobClicked(sender: AnyObject) {
-        
-        socket?.emit("finished_job")
+        socket?.emit("finished_job", args: ["{\"total_cost\":\"12.24\", \"job\":\"Cleaner\"}"])
         print("sent finish line")
     }
     
@@ -52,11 +51,13 @@ class OfferDetailsViewController: UIViewController {
         geocoder.geocodeAddressString(self.model.address, completionHandler: {(placemarks, error) -> Void in
             if let placemark = placemarks?.first {
                 let coordinates:CLLocationCoordinate2D = placemark.location!.coordinate
-                
 
                 let annot = MKPointAnnotation()
                 annot.coordinate = coordinates
                 map.addAnnotation(annot)
+                
+                let viewRegion = MKCoordinateRegionMakeWithDistance(coordinates, 500, 500)
+                map.setRegion(viewRegion, animated: false)
             }
         })
         
